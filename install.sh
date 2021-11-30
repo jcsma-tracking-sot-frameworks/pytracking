@@ -10,7 +10,7 @@ conda_env_name=$2
 
 source $conda_install_path/etc/profile.d/conda.sh
 echo "****************** Creating conda environment ${conda_env_name} python=3.7 ******************"
-conda create -y --name $conda_env_name python=3.7.0
+conda create -y --name $conda_env_name python=3.6.13
 
 echo ""
 echo ""
@@ -21,37 +21,37 @@ echo ""
 echo ""
 echo "****************** Installing pytorch with cuda10 ******************"
 #conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch
-conda install -y pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=10.0 -c pytorch
+conda install -y pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.0 -c pytorch
 
 echo ""
 echo ""
 echo "****************** Installing matplotlib ******************"
-conda install -y matplotlib
+conda install -y matplotlib=3.3.4
 
 echo ""
 echo ""
 echo "****************** Installing pandas ******************"
-conda install -y pandas
+conda install -y pandas=1.1.5
 
 echo ""
 echo ""
 echo "****************** Installing tqdm ******************"
-conda install -y tqdm
+conda install -y tqdm=4.62.3
 
 echo ""
 echo ""
 echo "****************** Installing opencv ******************"
-pip install opencv-python
+pip install opencv-python==4.5.4.60
 
 echo ""
 echo ""
 echo "****************** Installing tensorboard ******************"
-pip install tb-nightly
+pip install tb-nightly==2.8.0
 
 echo ""
 echo ""
 echo "****************** Installing visdom ******************"
-pip install visdom
+pip install visdom==0.1.8.9
 
 echo ""
 echo ""
@@ -61,27 +61,27 @@ pip install scikit-image
 echo ""
 echo ""
 echo "****************** Installing tikzplotlib ******************"
-pip install tikzplotlib
+pip install tikzplotlib==0.9.12
 
 echo ""
 echo ""
 echo "****************** Installing gdown ******************"
-pip install gdown
+pip install gdown==4.2.0
 
 echo ""
 echo ""
 echo "****************** Installing cython ******************"
-conda install -y cython
+conda install -y cython=0.29.24
 
 echo ""
 echo ""
 echo "****************** Installing coco toolkit ******************"
-pip install pycocotools
+pip install pycocotools==2.0.3
 
 echo ""
 echo ""
 echo "****************** Installing LVIS toolkit ******************"
-pip install lvis
+pip install lvis==0.5.3
 
 
 #echo ""
@@ -92,13 +92,13 @@ pip install lvis
 echo ""
 echo ""
 echo "****************** Installing jpeg4py python wrapper ******************"
-pip install jpeg4py 
+pip install jpeg4py==0.1.4
 
 echo ""
 echo ""
 echo "****************** Installing ninja-build to compile PreROIPooling ******************"
 echo "************************* Need sudo privilege ******************"
-sudo apt-get install ninja-build
+#sudo apt-get install ninja-build
 
 echo ""
 echo ""
@@ -128,17 +128,17 @@ python -c "from pytracking.evaluation.environment import create_default_local_fi
 python -c "from ltr.admin.environment import create_default_local_file; create_default_local_file()"
 
 
-echo ""
-echo ""
-echo "****************** Installing jpeg4py ******************"
-while true; do
-    read -p "Install jpeg4py for reading images? This step required sudo privilege. Installing jpeg4py is optional, however recommended. [y,n]  " install_flag
-    case $install_flag in
-        [Yy]* ) sudo apt-get install libturbojpeg; break;;
-        [Nn]* ) echo "Skipping jpeg4py installation!"; break;;
-        * ) echo "Please answer y or n  ";;
-    esac
-done
+#echo ""
+#echo ""
+#echo "****************** Installing jpeg4py ******************"
+#while true; do
+#    read -p "Install jpeg4py for reading images? This step required sudo privilege. Installing jpeg4py is optional, however recommended. [y,n]  " install_flag
+#    case $install_flag in
+#        [Yy]* ) sudo apt-get install libturbojpeg; break;;
+#        [Nn]* ) echo "Skipping jpeg4py installation!"; break;;
+#        * ) echo "Please answer y or n  ";;
+#    esac
+#done
 
 echo ""
 echo ""
