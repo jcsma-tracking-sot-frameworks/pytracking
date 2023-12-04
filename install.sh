@@ -23,7 +23,7 @@ echo "****************** Installing pytorch with cuda10 ******************"
 #conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch
 #conda install -y pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.0 -c pytorch
 #as of december 2023, torchvision==0.5.0 is not found in common channels. Added "-c conda-forge"
-pip install torch==1.4.0 torchvision==0.5.0  -f http://www-vpu.eps.uam.es/~jcs/DLVSP/pkgs/
+pip install torch==1.4.0 torchvision==0.5.0  -f http://www-vpu.eps.uam.es/~jcs/DLVSP/pkgs/torch_stable_dlvsp.html
 
 echo ""
 echo ""
