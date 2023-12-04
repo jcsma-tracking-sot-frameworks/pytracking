@@ -23,70 +23,78 @@ echo "****************** Installing pytorch with cuda10 ******************"
 #conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch
 #conda install -y pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.0 -c pytorch
 #as of december 2023, torchvision==0.5.0 is not found in common channels. Added "-c conda-forge"
-pip install torch==1.4.0 torchvision==0.5.0  -f http://www-vpu.eps.uam.es/~jcs/DLVSP/pkgs/torch_stable_dlvsp.html --trusted-host www-vpu.eps.uam.es
+pip install torch==1.4.0 torchvision==0.5.0  -f http://www-vpu.eps.uam.es/~jcs/DLVSP/pkgs/dlvsp.html --trusted-host www-vpu.eps.uam.es
 
 echo ""
 echo ""
-echo "****************** Installing matplotlib ******************"
-conda install -y matplotlib=3.3.4
+echo "****************** Installing matplotlib, pandas, tqdm, opencv, tensorboard, tikzplotlib ******************"
+pip install scikit-image matplotlib==3.3.4 pandas==1.1.5 tqdm==4.62.3 opencv-python==4.5.4.60 tensorboard==2.10.1  visdom==0.1.8.9 -f http://www-vpu.eps.uam.es/~jcs/DLVSP/pkgs/dlvsp.html --trusted-host www-vpu.eps.uam.es  
 
 echo ""
 echo ""
-echo "****************** Installing pandas ******************"
-conda install -y pandas=1.1.5
+echo "****************** Installing matplotlib, pandas, tqdm, opencv, tensorboard, tikzplotlib ******************"
+pip install tikzplotlib==0.9.12 cython==0.29.24 -f http://www-vpu.eps.uam.es/~jcs/DLVSP/pkgs/dlvsp.html --trusted-host www-vpu.eps.uam.es
 
-echo ""
-echo ""
-echo "****************** Installing tqdm ******************"
-conda install -y tqdm=4.62.3
+# Cyntho needs to be installed before pycocotools (otherwise gives an error)
+pip install gdown==4.2.0 pycocotools==2.0.3 lvis==0.5.3 jpeg4py==0.1.4 -f http://www-vpu.eps.uam.es/~jcs/DLVSP/pkgs/dlvsp.html --trusted-host www-vpu.eps.uam.es
 
-echo ""
-echo ""
-echo "****************** Installing opencv ******************"
-pip install opencv-python==4.5.4.60
+#echo ""
+#echo ""
+#echo "****************** Installing pandas ******************"
+#conda install -y pandas=1.1.5
 
-echo ""
-echo ""
-echo "****************** Installing tensorboard ******************"
+#echo ""
+#echo ""
+#echo "****************** Installing tqdm ******************"
+#conda install -y tqdm=4.62.3
+
+#echo ""
+#echo ""
+#echo "****************** Installing opencv ******************"
+#pip install opencv-python==4.5.4.60
+
+#echo ""
+#echo ""
+#echo "****************** Installing tensorboard ******************"
 #pip install tb-nightly==2.8.0
 #as of december 2023, tb-nightly==2.8.0 shows several installing errors
-pip install tensorboard==2.10.1
+#pip install tensorboard==2.10.1
 
 
-echo ""
-echo ""
-echo "****************** Installing visdom ******************"
-pip install visdom==0.1.8.9
+#echo ""
+#echo ""
+#echo "****************** Installing visdom ******************"
+#pip install visdom==0.1.8.9
 
-echo ""
-echo ""
-echo "****************** Installing scikit-image ******************"
-pip install scikit-image
+#echo ""
+#echo ""
+#echo "****************** Installing scikit-image ******************"
+#pip install scikit-image
 
-echo ""
-echo ""
-echo "****************** Installing tikzplotlib ******************"
-pip install tikzplotlib==0.9.12
+#echo ""
+#echo ""
+#echo "****************** Installing tikzplotlib ******************"
+#pip install tikzplotlib==0.9.12
 
-echo ""
-echo ""
-echo "****************** Installing gdown ******************"
-pip install gdown==4.2.0
+#echo ""
+#echo ""
+#echo "****************** Installing gdown ******************"
+#pip install gdown==4.2.0
 
-echo ""
-echo ""
-echo "****************** Installing cython ******************"
-conda install -y cython=0.29.24
+#echo ""
+#echo ""
+#echo "****************** Installing cython ******************"
+#conda install -y cython=0.29.24
 
-echo ""
-echo ""
-echo "****************** Installing coco toolkit ******************"
-pip install pycocotools==2.0.3
+#echo ""
+#echo ""
+#echo "****************** Installing coco toolkit ******************"
+#pip install pycocotools==2.0.3
 
-echo ""
-echo ""
-echo "****************** Installing LVIS toolkit ******************"
-pip install lvis==0.5.3
+#echo ""
+#echo ""
+#echo "****************** Installing LVIS toolkit ******************"
+#pip install lvis==0.5.3
 
 
 #echo ""
@@ -94,10 +102,10 @@ pip install lvis==0.5.3
 #echo "******** Installing spatial-correlation-sampler. Note: This is required only for KYS tracker **********"
 #pip install spatial-correlation-sampler
 
-echo ""
-echo ""
-echo "****************** Installing jpeg4py python wrapper ******************"
-pip install jpeg4py==0.1.4
+#echo ""
+#echo ""
+#echo "****************** Installing jpeg4py python wrapper ******************"
+#pip install jpeg4py==0.1.4
 
 echo ""
 echo ""
