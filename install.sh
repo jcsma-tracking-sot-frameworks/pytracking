@@ -107,20 +107,20 @@ pip install gdown==4.2.0 pycocotools==2.0.3 lvis==0.5.3 jpeg4py==0.1.4 -f http:/
 #echo "****************** Installing jpeg4py python wrapper ******************"
 #pip install jpeg4py==0.1.4
 
-echo ""
-echo ""
-echo "****************** Installing ninja-build to compile PreROIPooling ******************"
-echo "************************* Need sudo privilege ******************"
+#echo ""
+#echo ""
+#echo "****************** Installing ninja-build to compile PreROIPooling ******************"
+#echo "************************* Need sudo privilege ******************"
 #sudo apt-get install ninja-build
 
-echo ""
-echo ""
-echo "****************** Downloading networks ******************"
+#echo ""
+#echo ""
+#echo "****************** Downloading networks ******************"
 mkdir pytracking/networks
 
-echo ""
-echo ""
-echo "****************** DiMP50 Network ******************"
+#echo ""
+#echo ""
+#echo "****************** DiMP50 Network ******************"
 # gdown https://drive.google.com/uc\?id\=1qgachgqks2UGjKx-GdO1qylBDdB1f9KN -O pytracking/networks/dimp50.pth
 # gdown https://drive.google.com/uc\?id\=1MAjrRJDCbL0DSjUKFyDkUuYS1-cYBNjk -O pytracking/networks/dimp18.pth
 
